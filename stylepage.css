@@ -272,9 +272,10 @@ nav a:hover {
   overflow: hidden;
   max-width: 100%;
   margin: 20px auto;
+  margin-bottom: 0;
 }
 
-.video-cointainer iframe {
+.video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
