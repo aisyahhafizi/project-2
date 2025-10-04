@@ -71,7 +71,7 @@ nav a:hover {
 
 /* --- Header Image (Used on index.html) --- */
 .page-header img {
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
     display: block;
     margin: 20px auto 0 auto; /* Centers the image */
