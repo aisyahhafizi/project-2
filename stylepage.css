@@ -81,86 +81,6 @@ nav a:hover {
 }
 
 
-/* --- Shared Main Content Wrapper (Used on techhero.html) --- */
-.content-text {
-    max-width: 900px;
-    margin: 40px auto; 
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-top: 6px solid #007bff;
-}
-
-.content-text h2, 
-.content-text h3 {
-    color: #007bff;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    text-align: center; /* Centers titles within the content block */
-}
-
-/* Style for paragraph text in the content areas */
-.content-text p {
-    font-size: 1.5rem; /* Larger text size */
-    margin: 20px 0;
-    line-height: 1.4;
-    text-align: justify; /* Makes text look professional */
-    padding: 0 20px;
-}
-
-
-/* --- Tech Hero Page Specific Image & Links --- */
-.content-text .hero-image img {
-    max-width: 400px; /* Constrain image size */
-    height: auto;
-    display: block;
-    margin: 0 auto 30px auto; /* Centers the image */
-    border-radius: 50%; /* Make it circular for a profile photo */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.content-text .caption {
-    margin-bottom: 30px;
-}
-
-/* Centering the links list */
-.content-text .links {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-.content-text .links h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.content-text .links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block; /* Allows the list to be centered */
-}
-
-.content-text .links li {
-    margin: 10px 0;
-    text-align: left; /* Aligns list items to the left within the centered block */
-}
-
-.content-text .links a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: color 0.2s;
-}
-
-.content-text .links a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 /* --- Index.html Specific Styles (About Our Project) --- */
 
 .about-preview {
@@ -334,4 +254,94 @@ nav a:hover {
 /* Add some spacing between major sections */
 .content-text section {
   margin-bottom: 40px;
+}
+
+/* --- Tech Heroes Page --- */
+
+/* Wrap all heroes in a grid */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px; /* space between hero cards */
+  padding: 40px;
+}
+
+/* Each hero card */
+.content-text {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border-top: 6px solid #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hero image */
+.hero-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%; /* circular portrait */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Captions inside cards */
+.caption h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+  font-size: 1.3rem;
+}
+
+.caption p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+}
+
+/* Links section inside cards */
+.links {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.links h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #343a40;
+  text-align: center;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin: 8px 0;
+}
+
+.links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 }
