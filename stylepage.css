@@ -381,5 +381,18 @@ nav a:hover {
     grid-template-columns: 1fr;
     padding: 20px;
   }
+
+  /* Sticky Nav */
+  nav { 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #343a40;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1)
+  }
+
+  nav ul {
+    background-color: inherit;
+  }
 }
 
