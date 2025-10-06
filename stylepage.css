@@ -381,6 +381,7 @@ nav a:hover {
     grid-template-columns: 1fr;
     padding: 20px;
   }
+}
 
   /* Sticky Nav */
   nav { 
@@ -394,5 +395,5 @@ nav a:hover {
   nav ul {
     background-color: inherit;
   }
-}
+
 
